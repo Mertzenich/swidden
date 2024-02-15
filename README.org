@@ -1,0 +1,13 @@
+#+title: Amazon Search Scraper
+
+A work-in-progress utility for scraping Amazon search results. I am currently targeting book search results and will expand to handling more potential results as time goes on, in the meantime undefined behavior may occur when using queries that produce non-book results.
+
+* Example
+
+[[file:demo.gif][Demonstration]]
+
+* Dependencies
+
+- Google Chrome Driver
+- Clojure
+- Leiningen
