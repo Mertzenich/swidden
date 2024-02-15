@@ -4,7 +4,7 @@ A work-in-progress utility for scraping Amazon search results. I am currently ta
 
 * Example
 
-[[file:demo.gif][Demonstration]]
+[[demo.gif]]
 
 * Dependencies
 
