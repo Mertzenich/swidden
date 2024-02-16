@@ -46,22 +46,14 @@
 (defn get-title-recipe
   "Takes a hickory tree and returns the title-recipe subtree"
   [htree]
-  (-> (s/select (s/and (s/tag :div)
-                       (s/attr :data-cy
-                               (match "title-recipe")))
-                htree)
-      first))
+  (first (s/select (s/and (s/tag :div) (s/attr :data-cy (match "title-recipe"))) htree)))
 
 (defn title-recipe->sponsored?
   "Returns true if the title-recipe indicates a sponsored item,
   false otherwise."
   [title-recipe]
   ;; TODO: Handle "Featured from Amazon Brands"
-  (-> (s/select-next-loc (s/descendant (s/tag :div)
-                                       (s/and (s/tag :span)
-                                              (s/find-in-text #"Sponsored")))
-                         (hz/hickory-zip title-recipe))
-      (if true false)))
+  (if (s/select-next-loc (s/descendant (s/tag :div) (s/and (s/tag :span) (s/find-in-text #"Sponsored"))) (hz/hickory-zip title-recipe)) true false))
 
 (defn title-recipe->title-text
   "Takes a title-recipe tree and returns the item title text"
@@ -93,12 +85,7 @@
     ;; This means series (i.e. "Part of: Expert's Voices in Open Source")
     ;; will result in a return value of nil
     ;; TODO: Support series when an author is not specified
-    (if loc
-      (-> loc
-          cz/right
-          cz/next
-          cz/node)
-      nil)))
+    (when loc (-> loc cz/right cz/next cz/node))))
 
 (defn parse-title-recipe
   "Takes a title-recipe and returns a map containing the information
@@ -112,11 +99,7 @@
 (defn get-price-recipe
   "Takes a hickory tree and returns the price-recipe subtree"
   [htree]
-  (-> (s/select (s/and (s/tag :div)
-                       (s/attr :data-cy
-                               (match "price-recipe")))
-                htree)
-      first))
+  (first (s/select (s/and (s/tag :div) (s/attr :data-cy (match "price-recipe"))) htree)))
 
 (defn price-recipe->price
   "Takes a price-recipe tree and returns the item price"
@@ -130,11 +113,7 @@
                                         (s/and (s/tag :span)
                                                (s/class "a-offscreen")))
                                (hz/hickory-zip price-recipe))]
-    (if loc
-      (-> loc
-          cz/next
-          cz/node)
-      nil)))
+    (when loc (-> loc cz/next cz/node))))
 
 (defn price-recipe->format
   "Takes a price-recipe tree and returns the item format"
