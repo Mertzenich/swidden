@@ -1,13 +1,24 @@
 #+title: Swidden: Amazon Search Result Parser
 
-A work-in-progress utility for parsing Amazon search results. I am currently targeting book search results and will be expanding to cover more as time progresses.
+A work-in-progress utility for parsing Amazon search results. I am incrementally targeting different kinds of search results and adding more functionality. Note that this project, while offering naive scraping via the [[https://github.com/clj-commons/etaoin][Etaoin Clojure Webdriver protocol implementation]], is primarily focused on the parsing of page HTML. As time progresses I will expose a clean interface so that the parsing functionality can be easily accessed by a scraping solution.
+
+Here is what the parser can currently handle as well as /some/ of the planned features:
+
+- [X] Result titles
+- [X] Result authors
+- [ ] Author URLs
+- [X] Check if result is sponsored
+- [X] Return product URL
+- [X] First book format listing
+- [ ] Handle multiple book format listings
+- [X] Actual price
+- [ ] List price
+- [ ] Alternative offers
+- [ ] Image extraction
+- [ ] Stars
+- [ ] Review count
+- [ ] Delivery details
 
 * Demonstration
 
 [[demo.gif]]
-
-* Dependencies
-
-- Google Chrome Driver
-- Clojure
-- Leiningen
