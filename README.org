@@ -1,19 +1,5 @@
 #+title: Swidden: Amazon Search Result Parser
 
-#+begin_quote
-swid·den
-
-/ˈswidn/
-
-noun: swidden; plural noun: swiddens
-
-definition: an area of land cleared for cultivation by slashing and burning vegetation.
-
-usage: "slash-and-burn agricultural practices in the Amazon create swiddens which temporarily provide increased nutrients"
-
-source: Oxford Languages English Dictionary
-#+end_quote
-
 A work-in-progress utility for parsing Amazon search results. I am currently targeting book search results and will be expanding to cover more as time progresses.
 
 * Demonstration
