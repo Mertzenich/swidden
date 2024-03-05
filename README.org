@@ -4,20 +4,20 @@ A work-in-progress utility for parsing Amazon search results. I am incrementally
 
 Here is what the parser can currently handle as well as /some/ of the planned features:
 
-- [X] Result titles
-- [X] Result authors
-- [ ] Author URLs
-- [X] Check if result is sponsored
-- [X] Return product URL
-- [X] First book format listing
-- [ ] Handle multiple book format listings
-- [X] Actual price
-- [ ] List price
-- [ ] Alternative offers
-- [ ] Image extraction
-- [ ] Stars
-- [ ] Review count
-- [ ] Delivery details
+- ☒ Result titles
+- ☒ Result authors
+- ☐ Author URLs
+- ☒ Check if result is sponsored
+- ☒ Return product URL
+- ☒ First book format listing
+- ☐ Handle multiple book format listings
+- ☒ Actual price
+- ☐ List price
+- ☐ Alternative offers
+- ☐ Image extraction
+- ☐ Stars
+- ☐ Review count
+- ☐ Delivery details
 
 * Demonstration
 
